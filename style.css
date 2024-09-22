@@ -1,1 +1,315 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: "Lato", sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Navigation Bar */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  width: 150px;
+}
+
+.nav {
+  display: none;
+}
+
+.nav__list {
+  list-style: none;
+}
+
+.nav__item {
+  margin-left: 20px;
+}
+
+.nav__link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.nav__link:hover {
+  color: #f4f4f4;
+  border-bottom: 2px solid white;
+}
+
+.nav-open {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.hamburger {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  display: block;
+  margin: 5px;
+}
+
+/* Introduction Section */
+.intro {
+  text-align: center;
+  padding: 100px 20px;
+  background: #fff;
+}
+
+.intro__img {
+  width: 200px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+.section__title--intro {
+  font-size: 40px;
+  font-weight: 900;
+  color: #333;
+}
+
+.section__subtitle--intro {
+  font-size: 24px;
+  font-weight: 300;
+  color: #777;
+}
+
+/* My Services Section */
+.my-services {
+  background-color: #333;
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.section__title--services {
+  font-size: 36px;
+  color: #f4f4f4;
+}
+
+.services {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.service {
+  width: 30%;
+  background-color: #444;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.service h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.service p {
+  font-size: 16px;
+  color: #ddd;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 30px;
+  background-color: #f4f4f4;
+  color: #333;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+/* About Me Section */
+.about-me {
+  padding: 50px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.section__title--about {
+  font-size: 36px;
+  color: #333;
+}
+
+.section__subtitle--about {
+  font-size: 24px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.about-me__body {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.about-me__img {
+  width: 250px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+/* My Work Section */
+.my-work {
+  padding: 50px 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.section__title--work {
+  font-size: 36px;
+  color: #333;
+}
+
+.section__subtitle--work {
+  font-size: 24px;
+  color: #777;
+}
+
+.portfolio {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.portfolio__item {
+  width: 45%;
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  display: flex;
+}
+
+.portfolio__img {
+  width: 100px;
+  margin-right: 20px;
+}
+
+.portfolio__item h3 {
+  font-size: 20px;
+  color: #333;
+}
+
+.portfolio__item p {
+  font-size: 16px;
+  color: #666;
+}
+
+.back-to-top {
+  margin-top: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+}
+
+.footer__link {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.footer__link:hover {
+  text-decoration: underline;
+}
+
+.social-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.social-list__item {
+  margin: 0 10px;
+}
+
+.social-list__link {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.social-list__link:hover {
+  color: #f4f4f4;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .services {
+    flex-direction: column;
+  }
+
+  .service {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .portfolio {
+    flex-direction: column;
+  }
+
+  .portfolio__item {
+    width: 100%;
+  }
+
+  .nav-open {
+    flex-direction: column;
+  }
+
+  header {
+    flex-direction: column;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .nav-open {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
